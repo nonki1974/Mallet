@@ -18,6 +18,8 @@ set CMD=%1
 shift
 
 set CLASS=
+if "%CMD%"=="import-dmr" set CLASS=cc.mallet.topics.tui.DMRLoader
+if "%CMD%"=="train-dmr" set CLASS=cc.mallet.topics.DMRTopicModel
 if "%CMD%"=="import-dir" set CLASS=cc.mallet.classify.tui.Text2Vectors
 if "%CMD%"=="import-file" set CLASS=cc.mallet.classify.tui.Csv2Vectors
 if "%CMD%"=="import-svmlight" set CLASS=cc.mallet.classify.tui.SvmLight2Vectors

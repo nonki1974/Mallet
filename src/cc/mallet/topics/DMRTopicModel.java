@@ -485,9 +485,12 @@ public class DMRTopicModel extends ParallelTopicModel {
 
     public void writeParameters(File parameterFile) throws IOException {
         if (dmrParameters != null) {
-            PrintStream out = new PrintStream(parameterFile);
-            dmrParameters.print(out);
-            out.close();
+            // PrintStream out = new PrintStream(parameterFile);
+            // dmrParameters.print(out);
+            // out.close();
+	    PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(parameterFile)));
+	    dmrParameters.print(writer);
+	    writer.close();
         }
     }
     

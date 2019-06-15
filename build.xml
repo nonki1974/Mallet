@@ -58,6 +58,7 @@
                 classpathref="project.classpath"
                 debug="true"
                 deprecation="off"
+		includeantruntime="false"
                 listfiles="no">
             <src path="${src}"/>
             <include name="cc/**/*.java"/>
